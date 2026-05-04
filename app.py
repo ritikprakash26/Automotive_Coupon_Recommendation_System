@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from patsy import dmatrices
+from patsy import dmatrix
 import pickle
 
 # Load models
@@ -77,7 +77,7 @@ data = {
 df_input = pd.DataFrame(data)
 
 # Create design matrix
-Y_dummy, X_input = dmatrices('Y ~ 0 + destination + passanger + weather + temperature + time + coupon + \
+X_input = dmatrix('0 + destination + passanger + weather + temperature + time + coupon + \
  expiration + gender + age + maritalStatus + has_children + education + \
  occupation + income + Bar + CoffeeHouse + CarryAway + \
  RestaurantLessThan20 + Restaurant20To50 + toCoupon_GEQ5min + \
