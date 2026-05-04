@@ -16,7 +16,7 @@ with open('naive_bayes_model.pkl', 'rb') as f:
 with open('feature_names.pkl', 'rb') as f:
     feature_names = pickle.load(f)
 
-st.title("In-Vehicle Coupon Recommendation System")
+st.title("Automotive Coupon Recommendation System")
 
 st.write("Predict whether a driver will accept a coupon based on various features.")
 
